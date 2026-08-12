@@ -1,0 +1,367 @@
+/* ── Toolbar ── */
+mat-toolbar-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a3a5c;
+  height: 68px;
+  padding: 0 16px;
+}
+
+.toolbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Side Navigation ── */
+mat-sidenav-container {
+  height: 100%;
+}
+
+mat-sidenav a {
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+}
+
+mat-sidenav {
+  width: 220px;
+  background: #f8f9fb;
+  border-right: 1px solid #e5e7eb;
+}
+
+mat-nav-list mat-list-item:hover {
+  background: #e3f2fd;
+  color: #1a3a5c;
+}
+
+mat-nav-list mat-icon {
+  font-size: 18px;
+  margin-right: 8px;
+  color: #546e7a;
+}
+
+mat-nav-list a {
+  font-size: 15px;
+  text-decoration: none;
+  color: #37474f;
+  display: flex;
+  align-items: center;
+}
+
+mat-nav-list mat-expansion-panel {
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: transparent;
+}
+
+mat-nav-list mat-expansion-panel-header {
+  height: 38px !important;
+  padding: 0 16px 0 0 !important;
+  font-size: 13px;
+  color: #37474f;
+}
+
+mat-nav-list mat-expansion-panel-header:hover {
+  background: #e8f0fe !important;
+}
+
+mat-nav-list mat-expansion-panel mat-list-item a {
+  font-size: 12px;
+  color: #546e7a;
+}
+
+mat-nav-list mat-expansion-panel mat-list-item:hover {
+  background: #e3f2fd;
+}
+
+/* ── Router outlet content ── */
+mat-sidenav-content {
+  background: #f0f2f5;
+  overflow-y: auto;
+}
+
+mat-sidenav mat-icon {
+  font-size: 16px;
+  margin: 0px 0px -10px 0px;
+}
+
+mat-nav-list mat-list-item {
+  height: 35px;
+  font-size: 15px;
+  padding: 0 5px 0 10px;
+}
+
+mat-nav-list mat-expansion-panel mat-list-item {
+  height: 28px;
+}
+
+/* ── Logout button ── */
+.btn-logout {
+  color: rgba(255,255,255,0.7) !important;
+  border: 1px solid rgba(255,255,255,0.2) !important;
+  background: rgba(255,255,255,0.08) !important;
+  border-radius: 8px !important;
+}
+
+.btn-logout:hover {
+  color: #ffffff !important;
+  background: rgba(255,255,255,0.15) !important;
+}
+
+/* ── User area ── */
+.user-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 8px;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  border: 2px solid rgba(255,255,255,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: white;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.user-role {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* ── Menu button ── */
+.btn-nav {
+  color: #ffffff !important;
+  border: 1px solid rgba(255,255,255,0.2) !important;
+  background: rgba(255,255,255,0.1) !important;
+  border-radius: 8px !important;
+}
+
+/* ── Logo area ── */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+
+.system-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.system-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+.system-sub {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* ── Station badge ── */
+.station-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.8);
+  margin-right: 8px;
+}
+
+.station-badge mat-icon {
+  font-size: 14px !important;
+  width: 14px !important;
+  height: 14px !important;
+  color: rgba(255,255,255,0.7);
+}
+
+.sidenav-logo {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sidenav-logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+
+/*notification*/
+/* ── Notification button ── */
+.notif-btn {
+  color: rgba(255,255,255,0.8) !important;
+  position: relative;
+}
+
+/* ── Notification panel ── */
+.notif-panel {
+  position: absolute;
+  top: 68px;
+  right: 100px;
+  width: 340px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  z-index: 1000;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* ── Notification header ── */
+.notif-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #1a3a5c;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  position: sticky;
+  top: 0;
+}
+
+.notif-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.notif-count {
+  background: #e53935;
+  color: white;
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 12px;
+}
+
+.mark-all-btn {
+  color: rgba(255,255,255,0.7) !important;
+  font-size: 11px !important;
+  height: 24px !important;
+  line-height: 24px !important;
+}
+
+/* ── Notification item ── */
+.notif-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #f5f5f5;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.notif-item:hover {
+  background: #f5f7fa;
+}
+
+.notif-item:last-child {
+  border-bottom: none;
+}
+
+/* ── Notification icon colors by type ── */
+.notif-icon {
+  font-size: 18px !important;
+  width: 18px !important;
+  height: 18px !important;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.notif-icon.complaint    { color: #1a3a5c; }
+.notif-icon.analysis     { color: #6a1b9a; }
+.notif-icon.assignment   { color: #e65100; }
+.notif-icon.investigation { color: #0277bd; }
+.notif-icon.evidence     { color: #00695c; }
+.notif-icon.accused      { color: #c62828; }
+.notif-icon.arrest       { color: #c62828; }
+.notif-icon.bail         { color: #2e7d32; }
+.notif-icon.court        { color: #4527a0; }
+.notif-icon.mediation    { color: #00695c; }
+
+/* ── Notification text ── */
+.notif-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+.notif-message {
+  font-size: 12px;
+  color: #37474f;
+  line-height: 1.4;
+}
+
+.notif-time {
+  font-size: 11px;
+  color: #9e9e9e;
+}
+
+/* ── Unread dot ── */
+.notif-close {
+  font-size: 10px !important;
+  width: 10px !important;
+  height: 10px !important;
+  color: #1a3a5c;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+/* ── Empty state ── */
+.notif-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 16px;
+  color: #9e9e9e;
+  font-size: 13px;
+}
+
+.notif-empty mat-icon {
+  font-size: 32px !important;
+  width: 32px !important;
+  height: 32px !important;
+  color: #bdbdbd;
+}

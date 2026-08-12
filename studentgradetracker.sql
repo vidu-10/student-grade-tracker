@@ -1,0 +1,2 @@
+USE studentgradetracker;
+SHOW TABLES;

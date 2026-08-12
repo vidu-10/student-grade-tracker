@@ -1,0 +1,112 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <span class="toolbar-left">
+      <button mat-icon-button (click)="opened=!opened" class="btn-nav">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div class="logo-area">
+        <div class="system-title">
+          <span class="system-name">Police Complaint Management</span>
+          <span class="system-sub">Sri Lanka Police</span>
+        </div>
+      </div>
+    </span>
+
+    <span class="toolbar-right">
+      <div class="station-badge">
+        <mat-icon style="font-size:14px;">business</mat-icon>
+        <span>Colombo Police Station</span>
+      </div>
+
+<!--      <button mat-icon-button class="notif-btn" (click)="toggleNotifications()">-->
+<!--        <mat-icon [matBadge]="notificationCount" matBadgeColor="warn" [matBadgeHidden]="notificationCount === 0">notifications-->
+<!--        </mat-icon>-->
+<!--      </button>-->
+
+<!--      <div class="notif-panel" *ngIf="showNotifications">-->
+
+<!--        <div class="notif-header">-->
+<!--          <span>Notifications</span>-->
+<!--          <div class="notif-header-actions">-->
+<!--            <span class="notif-count">{{ notificationCount }}</span>-->
+<!--            <button mat-button class="mark-all-btn" (click)="markAllAsRead()">Mark all read</button>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div class="notif-item" *ngFor="let n of notifications" (click)="markAsRead(n)">-->
+<!--          <mat-icon class="notif-icon {{ n.type }}">{{ getNotifIcon(n.type) }}</mat-icon>-->
+<!--          <div class="notif-text">-->
+
+<!--            <span class="notif-message">{{ n.message }}</span>-->
+<!--            <span class="notif-time">{{ n.createdat | date:'dd MMM yyyy HH:mm' }}</span>-->
+<!--          </div>-->
+<!--          <mat-icon class="notif-close">circle</mat-icon>-->
+<!--        </div>-->
+
+<!--        <div class="notif-empty" *ngIf="notifications.length === 0">-->
+<!--          <mat-icon>notifications_none</mat-icon>-->
+<!--          <span>No new notifications</span>-->
+<!--        </div>-->
+
+<!--      </div>-->
+
+      <div class="user-area">
+        <div class="user-avatar">{{ getInitials() }}</div>
+        <div class="user-info">
+          <span class="user-name">{{ authService.getUsername() }}</span>
+          <span class="user-role">{{ role }}</span>
+        </div>
+      </div>
+
+      <button mat-icon-button (click)="logout()" class="btn-logout">
+        <mat-icon>logout</mat-icon>
+      </button>
+    </span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+
+  <mat-sidenav [(opened)]="opened" mode="side">
+
+    <mat-nav-list>
+
+      <mat-list-item>
+        <a routerLink="home">
+          <mat-icon>home</mat-icon>
+          Home</a>
+      </mat-list-item>
+
+<!--      <mat-list-item>-->
+<!--        <a routerLink="dashboard">-->
+<!--          <mat-icon>widgets</mat-icon>-->
+<!--          Dashboard-->
+<!--        </a>-->
+<!--      </mat-list-item>-->
+
+      <ng-container *ngFor="let menuItem of menuGroup">
+        <mat-expansion-panel *ngIf="isMenuVisible(menuItem.Menu)">
+          <mat-expansion-panel-header>
+            <mat-list-item>
+              <mat-icon>{{ matIcons[menuItem.Menu] }}</mat-icon>
+              {{ menuItem.Menu }}
+            </mat-list-item>
+          </mat-expansion-panel-header>
+          <ng-container *ngFor="let menuItem of menuItem.MenuItems">
+            <mat-list-item *ngIf="menuItem.isVisible">
+              <mat-list-item [routerLink]="menuItem.isVisible ? menuItem.routerLink : null"><a>{{ menuItem.name }}</a>
+              </mat-list-item>
+            </mat-list-item>
+          </ng-container>
+        </mat-expansion-panel>
+      </ng-container>
+
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+

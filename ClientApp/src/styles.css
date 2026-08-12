@@ -1,0 +1,211 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import 'material-icons/iconfont/material-icons.css';
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+mat-sidenav-content,
+.mat-sidenav-content,
+.mat-drawer-content {
+  background-color: #eef1f6 !important;
+}
+
+.mat-mdc-form-field-infix {
+  min-height: 28px !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+.mat-mdc-form-field .mat-mdc-floating-label.mdc-floating-label {
+  padding-bottom: 15px;
+  font-size: 14px !important;
+}
+
+mat-form-field input {
+  font-size: 14px !important;
+}
+
+.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: darkred !important;
+}
+
+.mdc-text-field--valid:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: darkgreen !important;
+}
+
+.dark-mode {
+  filter: invert(100%) hue-rotate(180deg);
+}
+
+/* ── Global Material overrides in styles.css ── */
+
+/* Grid tile alignment */
+mat-grid-tile .mat-grid-tile-content {
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  padding: 8px !important;
+}
+
+/* Cards */
+mat-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px !important;
+  /*box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;*/
+  box-shadow: 0 4px 13px rgba(0,0,0,0.08) !important;
+  border: 1px solid #c0c1c9;
+  overflow: hidden;
+}
+
+mat-card:hover {
+  box-shadow: 0 6px 18px rgba(13,27,62,0.12) !important;
+  transition: box-shadow 0.2s ease;
+}
+
+/* Card headers */
+mat-card-header {
+  background: #0d1b3e;
+  border-left: 4px solid #c9a24b;
+  border-radius: 0;
+  padding: 14px 18px !important;
+  display: flex;
+  align-items: center;
+}
+
+mat-card-header mat-card-title {
+  color: #ffffff !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  margin: 0 !important;
+}
+
+/* Card content */
+mat-card-content {
+  padding: 14px 16px !important;
+  overflow-y: auto;
+}
+
+/* Form fields */
+mat-form-field {
+  width: 100%;
+}
+
+.btn-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #f0f0f0;
+  margin-bottom: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn-row button {
+  flex: 1;
+  min-width: 0;
+  border-radius: 8px !important;
+  padding: 0 8px !important;
+  font-size: 13px;
+}
+
+.btn-row button:first-child {
+  background: #0d1b3e !important;
+  color: #ffffff !important;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
+.mat-mdc-row:hover {
+  background: #e8f0fe !important;
+}
+
+.mat-mdc-cell {
+  font-size: 13px;
+  color: #37474f;
+}
+
+
+
+.mat-mdc-table {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  margin-top: 8px;
+}
+
+.selected-row {
+  background: #e3f2fd !important;
+  border-left: 3px solid #0d1b3e !important;
+}
+
+.selected-row mat-cell {
+  color: #0d1b3e !important;
+  font-weight: 500 !important;
+}
+
+mat-paginator {
+  background: #f5f7fa !important;
+  border-top: 1px solid #e0e0e0;
+  border-radius: 0 0 10px 10px;
+  font-size: 11px;
+}
+
+.mat-mdc-tab-header {
+  background: #f5f7fa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.mat-mdc-header-row {
+  margin: 0 !important;
+}
+
+.mat-mdc-row {
+  min-height: 40px;
+  border-bottom: 1px solid #f0f0f0 !important;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.mdc-tab-indicator__content--underline {
+  border-color: #c9a24b !important;
+}
+
+.mdc-tab__text-label {
+  color: #0d1b3e !important;
+}
+
+.mdc-tab--active .mdc-tab__text-label {
+  color: #0d1b3e !important;
+  font-weight: 500 !important;
+}
+
+.mat-mdc-tab-header {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/*calender*/
+.mat-calendar-body-selected {
+  background-color: #0d1b3e !important;
+  color: #ffffff !important;
+}
+
+.mat-calendar-body-today:not(.mat-calendar-body-selected) {
+  border-color: #c9a24b !important;
+}
+
+.mat-datepicker-toggle-active {
+  color: #0d1b3e !important;
+}
+
+
