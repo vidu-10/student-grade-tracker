@@ -63,16 +63,6 @@ export class EmployeeComponent implements OnInit{
 
   uiassist: UiAssist;
 
-  // type 1 - cannot select future dates
-  // maxDate!: Date ;
-
-  // type 2 - set max date to 18 years ago
-  // maxDate: Date = new Date();
-
-  //type 3 - to set date range
-  // minDate: Date = new Date(1920, 0, 1);  // January 1, 1920
-  // maxDate: Date = new Date();
-
   constructor(
     private es: EmployeeService,
     private gs: GenderService,
@@ -85,12 +75,6 @@ export class EmployeeComponent implements OnInit{
     public authService: AuthorizationManager) {
 
     this.uiassist = new UiAssist(this);
-
-    // type 2 - set max date to 18 years ago
-    // this.maxDate.setFullYear(this.maxDate.getFullYear() - 18);
-
-    // type 3 - to set date range
-    // this.maxDate.setFullYear(this.maxDate.getFullYear() - 18);
 
     this.ssearch = this.fb.group({
       "ssfullname": new FormControl(),
